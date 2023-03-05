@@ -14,3 +14,35 @@
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
+
+h1{
+    font-size: 5.5rem;
+    color:blueviolet;
+    margin-bottom: 5rem;
+}
+
+h1 > span{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size:2.5rem;
+    font-weight: 500;
+}
+
+/*content*/
+
+.container {
+    width: 100vw;  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
