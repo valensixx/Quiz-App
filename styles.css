@@ -74,3 +74,33 @@ h3{
 .hidden{
     display: none;
 }
+
+/*content end*/
+
+/*buttons*/
+.btn{
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid solid blueviolet;
+    color: blueviolet;
+    background: orange;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.5rem 0 rgb(182, 119, 241);
+    transform: translate(-0.5rem);
+    transition: transform 150ms;
+}
+
+.btn[desabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+/*buttons end*/
