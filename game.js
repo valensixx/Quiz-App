@@ -1,5 +1,6 @@
 const question = document.getElementById('question');
-const choices = Array.from(document.getElementById('choice-text'));
+//const choices = Array.from(document.getElementById('choice-text'));
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -61,6 +62,7 @@ getNewQuestion = () => {
 
     choices.forEach(choice => {
         const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
     });
 };
 
