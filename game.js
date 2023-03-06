@@ -55,6 +55,12 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+
+    if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
+        //go to last page
+        return window.location.assign('/end.html');
+    }
+
     questionCounter ++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length); 
     currentQuestion = availableQuestions[questionIndex];
@@ -68,5 +74,18 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
+
+choices.forEach(choice => {
+    choice.addEventListener("click", e =>{
+        //console.log(e.target);
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChioice = e.target;
+        const selectedAnswer = selectedChioice.dataset["number"];
+
+        getNewQuestion();
+    });
+});
 
 startGame();
