@@ -56,7 +56,7 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-    if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
         //go to last page
         return window.location.assign('/end.html');
     }
@@ -84,6 +84,13 @@ choices.forEach(choice => {
         const selectedChioice = e.target;
         const selectedAnswer = selectedChioice.dataset["number"];
 
+        const classToApply = 'incorrect';
+        if(selectedAnswer == currentQuestion.answer){
+            classToApply = 'correct';
+        }
+
+        selectedChioice.parentElement.classList.add(classToApply);
+        //selectedChioice.parentElement.classList.remove(classToApply);
         getNewQuestion();
     });
 });
