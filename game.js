@@ -84,7 +84,7 @@ choices.forEach(choice => {
         const selectedChioice = e.target;
         const selectedAnswer = selectedChioice.dataset["number"];
 
-        const classToApply = 'incorrect';
+        let classToApply = 'incorrect';
         if(selectedAnswer == currentQuestion.answer){
             classToApply = 'correct';
         }
