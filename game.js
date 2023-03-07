@@ -90,8 +90,12 @@ choices.forEach(choice => {
         }
 
         selectedChioice.parentElement.classList.add(classToApply);
-        //selectedChioice.parentElement.classList.remove(classToApply);
-        getNewQuestion();
+
+        setTimeout(()=>{
+            selectedChioice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+        
     });
 });
 
