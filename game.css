@@ -58,4 +58,5 @@
 #progressBarFull{
     height: 3.5rem;
     background-color: blueviolet;
+    width: 0%;
 }
