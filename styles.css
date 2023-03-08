@@ -122,3 +122,7 @@ input{
     border: none;
     box-shadow: 0 0.1rem 1.4rem 0 rgb(227, 198, 255);
 }
+
+input::placeholder{
+    color: #aaa;
+}
